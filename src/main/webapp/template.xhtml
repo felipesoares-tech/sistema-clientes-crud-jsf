@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <h:head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Sistema Cadastros</title>
+    </h:head>
+    <h:body>
+        <header id="header">
+            <ui:insert name="header"/>
+            <p:menubar>
+                <p:submenu label="Clientes" icon="pi pi-fw pi-user">
+                    <p:menuitem value="Novo" icon="pi pi-fw pi-user-plus" url="cliente.xhtml"/>
+                </p:submenu>
+                <p:menuitem value="Voltar" icon="pi pi-arrow-circle-left"  url="index.xhtml">
+                </p:menuitem>
+                <p:divider layout="vertical"/>
+                    </p:menubar>
+        </header>
+        <div id="content">
+            <ui:insert name="conteudo"/>
+        </div>
+    </h:body>
+</html>
