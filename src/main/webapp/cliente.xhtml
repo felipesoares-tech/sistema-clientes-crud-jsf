@@ -23,7 +23,7 @@
                 </h:panelGrid>
                 <p:column>
                     <p:commandButton icon="pi pi-user-plus" update="@form" value="Cadastrar"
-                                     actionListener="#{clienteBean.novo()}"></p:commandButton>
+                                     actionListener="#{clienteBean.salvar()}"></p:commandButton>
                 </p:column>
                 <p:dataTable value="#{clienteBean.entitys}" var="entity" >
 
