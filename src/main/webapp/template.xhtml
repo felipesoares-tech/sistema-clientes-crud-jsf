@@ -13,15 +13,17 @@
     <h:body>
         <header id="header">
             <ui:insert name="header"/>
-            <p:menubar>
-                <p:submenu label="Clientes" icon="pi pi-fw pi-user">
-                    <p:menuitem value="Novo" icon="pi pi-fw pi-user-plus" actionListener="#{clienteBean.novo()}" url="cliente.xhtml" 
-                                />
-                </p:submenu>
-                <p:menuitem value="Voltar" icon="pi pi-arrow-circle-left"  url="index.xhtml">
-                </p:menuitem>
-                <p:divider layout="vertical"/>
-                    </p:menubar>
+            <h:form>
+
+                <p:menubar>
+                    <p:submenu label="Clientes" icon="pi pi-fw pi-user">
+                        <p:menuitem value="Novo" icon="pi pi-fw pi-user-plus" ajax="ajax;" action="#{clienteBean.novo()}"  />
+                    </p:submenu>
+                    <p:menuitem value="Voltar" icon="pi pi-arrow-circle-left"  url="index.xhtml">
+                    </p:menuitem>
+                    <p:divider layout="vertical"/>
+                        </p:menubar>
+            </h:form>
         </header>
         <div id="content">
             <ui:insert name="conteudo"/>

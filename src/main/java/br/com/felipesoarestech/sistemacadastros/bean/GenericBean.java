@@ -22,14 +22,16 @@ public abstract class GenericBean<E, L extends GenericLogic<E>> extends BeanUtil
         }
     }
     
-    public void novo(){
+    public String novo(){
         newInstanceOfEntity();
+        return "cliente";
     }
   
     public void salvar(){
         getLogic().salvar(entity);
         addInfo("Salvo com sucesso.");
         newInstanceOfEntity();
+        listar();
     }
     
     
