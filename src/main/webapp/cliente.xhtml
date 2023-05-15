@@ -10,16 +10,16 @@
             <h:form>
                 <h:panelGrid columns="2" >
                     <p:outputLabel value="Nome" for="inputNome"></p:outputLabel>
-                    <p:inputText id="inputNome" value="#{clienteBean.entity.nome}"></p:inputText>
+                    <p:inputText id="inputNome" value="#{clienteBean.entity.nome}" required="true"></p:inputText>
 
                     <p:outputLabel value="Email" for="inputEmail"></p:outputLabel>
                     <p:inputText id="inputEmail"  value="#{clienteBean.entity.email}"></p:inputText>
 
                     <p:outputLabel value="CPF" for="inputCPF"></p:outputLabel>
-                    <p:inputMask value="#{clienteBean.entity.cpf}" id="inputCPF" mask="999.999.999-99"></p:inputMask>
+                    <p:inputMask value="#{clienteBean.entity.cpf}" id="inputCPF" mask="999.999.999-99" required="true"></p:inputMask>
 
                     <p:outputLabel value="Data Nascimento" for="inputData"></p:outputLabel>
-                    <p:datePicker  monthNavigator="true" yearNavigator="true" yearRange="1950:3023" showWeek="true" value="#{clienteBean.entity.dataNascimento}" id="inputData"></p:datePicker>
+                    <p:calendar id="inputData" value="#{clienteBean.entity.dataNascimento}" showOn="button" navigator="true" yearRange="1950:3023" showWeek="true"></p:calendar>
                 </h:panelGrid>
                 <p:column>
                     <p:commandButton icon="pi pi-user-plus" update="@form" value="Cadastrar"
@@ -40,6 +40,9 @@
                         <h:outputText value="#{entity.dataNascimento}"></h:outputText>
                     </p:column>
                 </p:dataTable>
+                <p:growl id="messages" showDetail="true" >
+                    <p:autoUpdate></p:autoUpdate>
+                          </p:growl>
             </h:form>
         </ui:define>
     </ui:composition>
